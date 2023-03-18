@@ -21,12 +21,12 @@
                     <th></th>
                 </tr>
 
-                @foreach ($algomais as $algomais)
+                @foreach ($vestuarios as $vestuario)
                     <tr>
-                        <td>{{ $algomais->Vestidos }}</td>
-                        <td>{{ $algomais->Preco }}</td>
-                        <td>{{ $algomais->Tamanho }}</td>
-                        <td>{{ $algomais->Cor }}</td>
+                        <td>{{ $vestuario->vestidos }}</td>
+                        <td>{{ $vestuario->preco }}</td>
+                        <td>{{ $vestuario->tamanho }}</td>
+                        <td>{{ $vestuario->cor }}</td>
                         <td></td>
                     </tr>
                 @endforeach

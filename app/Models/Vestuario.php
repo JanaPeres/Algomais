@@ -9,14 +9,14 @@ class Vestuario extends Model
 {
     use HasFactory;
 
-     // Indica o nome da tabela do banco de dados
-     protected $table = "algomais";
+    // Indica o nome da tabela do banco de dados
+    protected $table = "vestuarios";
 
-     // Indica os campos que podem ser preenchidos pelo usuário
-     protected $fillable = [
+    // Indica os campos que podem ser preenchidos pelo usuário
+    protected $fillable = [
          'vestidos',
          'preco',
          'tamanho',
          'cor'
-     ];
+    ];
  }

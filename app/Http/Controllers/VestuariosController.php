@@ -5,19 +5,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Vestuario;
 
-class AlgomaisController extends Controller
+class VestuariosController extends Controller
 {
     public function index()
     {
+        $vestuarios = Vestuario::all();
 
-        $algomais = Vestuario::all();
-
-        return view('algomais.index', compact('vestuarios'));
+        return view('vestuarios.index', compact('vestuarios'));
     }
 
     public function create()
     {
-
+        return view('vestuarios.create');
     }
     public function store(Request $request)
     {

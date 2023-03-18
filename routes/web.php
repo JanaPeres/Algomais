@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 Route::get('/vestuarios', [VestuariosController::class, 'index'])->name('vestuarios.index');
 
-Route::get('/vestuarios/create', [VestuariosController::class, 'create'])->name('vestuarios.create');
+Route::get('/vestuarios/novo', [VestuariosController::class, 'create'])->name('vestuarios.create');
 
 Route::get('/vestuarios/{id}', [VestuariosController::class, 'show'])->name('vestuarios.show');
 
