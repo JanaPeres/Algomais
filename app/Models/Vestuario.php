@@ -17,6 +17,7 @@ class Vestuario extends Model
          'vestidos',
          'preco',
          'tamanho',
-         'cor'
+         'cor',
+         'observacao'
     ];
  }

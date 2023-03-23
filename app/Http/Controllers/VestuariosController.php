@@ -18,14 +18,28 @@ class VestuariosController extends Controller
     {
         return view('vestuarios.create');
     }
-    public function store(Request $request)
+    public function store(Request $requisicao)
     {
+        $vestuario = new Vestuario();
 
+        // Preenche os campos do objeto com os dados da requisição
+        $vestuario->vestidos = $requisicao->vestidos;
+        $vestuario->preco = $requisicao->preco;
+        $vestuario->tamanho = $requisicao->tamanho;
+        $vestuario->cor = $requisicao->cor;
+        $vestuario->observacao = $requisicao->observacao;
+
+
+        // Salva o objeto no banco de dados
+        $vestuario->save();
+
+        // Redireciona para a página de detalhes do gato
+        return redirect()->route('vestuarios.show', $vestuario->id);
     }
 
-    public function show($id)
+    public function show(Vestuario $vestuario)
     {
-
+        return view('vestuarios.view', compact('vestuario'));
     }
 
     public function edit($id)

@@ -35,6 +35,11 @@
                     <input type="text" name="cor" class="form-control">
                 </div>
 
+                <div class="mb-3">
+                    <label>observacao</label>
+                    <textarea name="observacao" id="" rows="5" class="form-control"></textarea>
+                </div>
+
                 <div>
                     <input type="submit" value="Salvar Cadastro" class="btn btn-primary">
                 </div>

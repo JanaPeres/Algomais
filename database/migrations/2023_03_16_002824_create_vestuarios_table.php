@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string('preco');
             $table->string('tamanho');
             $table->string('cor');
+            $table->text('observacao');
+
             $table->timestamps();
         });
     }

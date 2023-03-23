@@ -12,12 +12,15 @@
         <div class="container">
             <h1>Lista de Vestidos</h1>
 
+            <a class="btn btn-outline-success my-2" href="{{ route('vestuarios.create') }}">Novo Vestuario</a>
+
             <table class="table table-hover table-bordered table-primary">
                 <tr class="table-dark">
                     <th>Vestidos</th>
                     <th>Preco</th>
                     <th>Tamanho</th>
                     <th>Cor</th>
+                    <th>Observacao</th>
                     <th></th>
                 </tr>
 
@@ -27,7 +30,12 @@
                         <td>{{ $vestuario->preco }}</td>
                         <td>{{ $vestuario->tamanho }}</td>
                         <td>{{ $vestuario->cor }}</td>
-                        <td></td>
+                        <td>{{ $vestuario->observacao }}</td>
+                        <td>
+                            <a class="link" href="{{ route('vestuarios.show', $vestuario->id) }}">
+                                Ver
+                            </a>
+                        </td>
                     </tr>
                 @endforeach
             </table>
