@@ -23,10 +23,10 @@ Route::get('/vestuarios/novo', [VestuariosController::class, 'create'])->name('v
 
 Route::get('/vestuarios/{vestuario}', [VestuariosController::class, 'show'])->name('vestuarios.show');
 
-Route::get('/vestuarios/{id}/edit', [VestuariosController::class, 'edit'])->name('vestuarios.edit');
+Route::get('/vestuarios/{vestuario}/editar', [VestuariosController::class, 'edit'])->name('vestuarios.edit');
 
 Route::post('/vestuarios', [VestuariosController::class, 'store'])->name('vestuarios.store');
 
-Route::put('/vestuarios/{id}', [VestuariosController::class, 'update'])->name('vestuarios.update');
+Route::put('/vestuarios/{vestuario}', [VestuariosController::class, 'update'])->name('vestuarios.update');
 
 Route::delete('/vestuarios/{id}', [VestuariosController::class, 'destroy'])->name('vestuarios.destroy');

@@ -42,15 +42,17 @@ class VestuariosController extends Controller
         return view('vestuarios.view', compact('vestuario'));
     }
 
-    public function edit($id)
+    public function edit(Vestuario $vestuario)
     {
-
+        return view('vestuarios.edit', compact('vestuario'));
     }
 
 
-    public function update(Request $request, $id)
+    public function update(Request $requisicao, Vestuario $vestuario)
     {
+        $vestuario->update($requisicao->all());
 
+        return redirect()->route('vestuarios.show', $vestuario->id);
     }
 
     public function destroy($id)
