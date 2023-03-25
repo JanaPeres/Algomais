@@ -30,7 +30,16 @@
                 {{ $vestuario->observacao }}
             </p>
 
-            <a href="{{ route('vestuarios.index') }}">Voltar a lista</a>
+            <a class="btn btn-light" href="{{ route('vestuarios.index') }}">Voltar a lista</a>
+            <a class="btn btn-warning" href="{{ route('vestuarios.edit', $vestuario->id) }}">Editar</a>
+
+            <form method="POST" action="{{ route('vestuarios.destroy', $vestuario->id) }}">
+                @csrf
+                @method('DELETE')
+
+                <input type="submit" value="Excluir Vestuario" class="btn btn-danger">
+
+            </form>
         </div>
     </body>
 </html>
