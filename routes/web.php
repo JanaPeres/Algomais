@@ -29,4 +29,4 @@ Route::post('/vestuarios', [VestuariosController::class, 'store'])->name('vestua
 
 Route::put('/vestuarios/{vestuario}', [VestuariosController::class, 'update'])->name('vestuarios.update');
 
-Route::delete('/vestuarios/{id}', [VestuariosController::class, 'destroy'])->name('vestuarios.destroy');
+Route::delete('/vestuarios/{vestuario}', [VestuariosController::class, 'destroy'])->name('vestuarios.destroy');

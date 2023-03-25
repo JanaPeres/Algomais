@@ -55,9 +55,11 @@ class VestuariosController extends Controller
         return redirect()->route('vestuarios.show', $vestuario->id);
     }
 
-    public function destroy($id)
+    public function destroy(Vestuario $vestuario)
     {
+        $vestuario->delete();
 
+        return redirect()->route('vestuarios.index');
     }
 
 }
